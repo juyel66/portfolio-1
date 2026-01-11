@@ -1,0 +1,34 @@
+
+
+"use client"
+
+import { Facebook, Github, Linkedin } from "lucide-react"
+
+// import { Github, Linkedin, Facebook } from "lucide-react"
+
+const SocialIcons = () => {
+  const socialLinks = [
+    { icon: <Github size={20} />, url: "https://github.com/juyel66/", label: "GitHub" },
+    { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/md-juyel-rana/", label: "LinkedIn" },
+    { icon: <Facebook size={20} />, url: "https://www.facebook.com/juyel99730/", label: "Facebook" },
+  ]
+
+  return (
+    <div className="flex gap-4">
+      {socialLinks.map((social, index) => (
+        <a
+          key={index}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={social.label}
+          className="h-10 w-10 rounded-full bg-gray-800 border-2 border-white hover:bg-blue-500 flex items-center justify-center transition-colors duration-300"
+        >
+          {social.icon}
+        </a>
+      ))}
+    </div>
+  )
+}
+
+export default SocialIcons
