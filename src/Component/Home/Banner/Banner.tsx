@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 
 import { Link } from "react-router";
 import SocialIcons from "../../Shared/SocialIcons";
+import juyel from "../../../assets/juyel.jpg";
 
 const Banner = () => {
   useEffect(() => {
@@ -100,13 +101,30 @@ const Banner = () => {
           >
 
 
-            <div className="relative h-[330px] w-[300px] md:h-[400px] md:w-[350px] lg:h-[500px] lg:w-[400px] border-4 border-blue-500/40 overflow-hidden shadow-xl shadow-blue-500/20">
-              <img
-                src="https://github.com/juyel66.png"
-                alt="JUYEL"
-                className="object-cover w-full h-full"
-              />
-            </div>
+          <div className="relative mt-10 group h-[330px] w-[300px] md:h-[400px] md:w-[350px] lg:h-[500px] lg:w-[400px]">
+
+  {/* Animated Glow Border */}
+  <div className="absolute -inset-[2px] rounded-xl bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 opacity-70 blur-md group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+
+  {/* Main Card */}
+  <div className="relative h-full w-full rounded-xl overflow-hidden border border-white/10 bg-black shadow-2xl shadow-blue-500/40">
+
+    {/* Shine Effect */}
+    <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-tr from-white/10 via-white/20 to-transparent"></div>
+
+    {/* Image */}
+    <img
+      src={juyel}
+      alt="JUYEL"
+      className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
+    />
+
+    {/* Subtle Dark Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+
+  </div>
+</div>
+
 
             
           </div>
