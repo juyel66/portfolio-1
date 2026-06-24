@@ -36,7 +36,8 @@ const Education = () => {
               <p className="text-xl">Computer Scinece & Engineering</p>
               <p className="text-xl"> </p>
               <h2>Uttara University, Dhaka</h2>
-              <p>Session: 2025 - 2028</p>
+              <p>2025 – Present </p>
+              <p> Expected Graduation: 2028</p>
             </div>
             <div className="flex flex-col justify-center items-center">
               <div className="h-5 w-5 rounded-full bg-blue-300"></div>
